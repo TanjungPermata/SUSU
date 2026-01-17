@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Input Form Style --- */
+.input-form {
+    padding: 20px;
+    border: 1px dashed #ccc;
+    margin-bottom: 20px;
+}
+
+.input-form label, .input-form input, .input-form button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-form input[type="text"], .input-form input[type="number"], .input-form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#itemTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#itemTable th, #itemTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* --- Tampilan Invoice (Custom Design) --- */
+.invoice-preview {
+    padding: 40px;
+    border: 1px solid #000;
+}
+
+.invoice-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+.invoice-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ❌ HAPUS GAYA LAMA UNTUK .company-name */
+/*
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+*/
+
+/* 🌟 GAYA BARU UNTUK LOGO */
+.company-logo {
+    max-width: 150px; 
+    height: auto;
+    margin-left: auto;
+    display: block;
+}
+
+
+.invoice-details-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.recipient-info {
+    width: 50%;
+}
+
+.date-number-info {
+    width: 35%;
+    text-align: right;
+}
+
+.info-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.heading {
+    font-weight: bold;
+}
+
+.item-display {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+/* 🛠️ ALIGNMENT TABEL (dipertahankan) */
+.item-display th {
+    background-color: #eee;
+    font-weight: bold;
+    padding: 8px; 
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.item-display th:nth-child(1) {
+    text-align: left;
+    padding-left: 10px; 
+}
+
+.item-display th:nth-child(2), 
+.item-display th:nth-child(3), 
+.item-display th:nth-child(4)  {
+    text-align: right; 
+    padding-right: 180px; 
+}
+
+.item-display td {
+    padding: 8px; 
+    border-bottom: 1px dashed #ccc;
+}
+
+.item-display td:nth-child(1) {
+    text-align: left; 
+    padding-left: 10px;
+}
+
+.item-display td:nth-child(2), 
+.item-display td:nth-child(3), 
+.item-display td:nth-child(4)  {
+    text-align: right; 
+    padding-right: 180px; 
+}
+
+
+.bottom-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.totals-area {
+    width: 100%; 
+    max-width: 350px; 
+    margin-left: auto;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.grand-total {
+    border-top: 3px solid #000;
+    font-weight: bold;
+    margin-top: 0px; 
+    padding-top: 10px !important;
+}
+
+.thank-you {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* Sembunyikan Input Form saat dicetak */
+@media print {
+    .input-form, button {
+        display: none;
+    }
+    .container {
+        box-shadow: none;
+        max-width: none;
+    }
+    .invoice-preview {
+        border: none;
+    }
+}
